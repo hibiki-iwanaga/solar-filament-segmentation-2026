@@ -174,7 +174,7 @@ Guide mode is on.}
 
 \textbf{Strengths and weaknesses.} The quality model turns the metric's per-instance trade-off into a learned decision and absorbs new evidence cheaply (each detector or descriptor family is a few columns); the refiner improves outlines without fragmenting or merging instances (one-to-many and many-to-one rates stay at about 3\,\%). Weaknesses: 35\,\% of the annotated filaments are not matched and 21\,\% are not touched by any prediction (Fig.~\ref{fig:eval}a; mostly small, faint, or near the limb, where the candidate pool matches only 21\,\% of the filaments beyond 0.9\,$R_\odot$), the pipeline is heavy (9 networks $\times$ 5 folds, about 2.1\,h of inference on two T4 GPUs), and the annotator-style variance caps the attainable score (two human records agree at PQ 0.34). Improvements we would try next: candidates from the refiner itself (a second pool around low-quality regions), and limb-aware augmentation for the faint near-limb filaments.
 
-\textbf{Reproducibility.} The repository contains the training notebooks of every stage, the weights (float16, 5 folds), the two LightGBM models and the calibration histograms; \texttt{pipeline.ipynb} produced the submitted file from the test images alone.
+{\sloppy \textbf{Reproducibility.} The repository (\href{https://github.com/hibiki-iwanaga/solar-filament-segmentation-2026}{github.com/\allowbreak hibiki-iwanaga/\allowbreak solar-\allowbreak filament-\allowbreak segmentation-2026}) contains the training notebooks of every stage, the weights (float16, 5 folds), the two LightGBM models and the calibration histograms; \texttt{pipeline.ipynb} produced the submitted file from the test images alone.\par}
 
 % ==================================== %
 %            ACKNOWLEDGMENT            %
