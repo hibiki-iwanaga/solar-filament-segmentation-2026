@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+/submission.csv
+/submission_quality.csv
+/figures/
+.ipynb_checkpoints/
