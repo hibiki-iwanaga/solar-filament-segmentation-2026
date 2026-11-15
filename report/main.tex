@@ -82,7 +82,7 @@ Guide mode is on.}
 % ==================================== %
 \section{Methodology}\label{sec:methodology}
 
-\textbf{Data and splits.} We use only the competition data: 705 training images (2048\,$\times$\,2048 px) with 1--3 annotator records each, 180 test images. All stages use the same five folds (a fixed random permutation of the sorted image names), so every training image has \emph{out-of-fold} (OOF) predictions from models that never saw it; all model selection uses the OOF PQ computed exactly like the competition metric (we verified our implementation against the organizers' self-evaluation notebook). No external annotations, no file-name metadata and no test-time information beyond the test images are used.
+\textbf{Data and splits.} We use only the competition data: 707 training images (2048\,$\times$\,2048 px) with 1--3 annotator records each, 180 test images. All stages use the same five folds (a fixed random permutation of the sorted image names), so every training image has \emph{out-of-fold} (OOF) predictions from models that never saw it; all model selection uses the OOF PQ computed exactly like the competition metric (we verified our implementation against the organizers' self-evaluation notebook). No external annotations, no file-name metadata and no test-time information beyond the test images are used.
 
 \textbf{Pre-processing.} Images are divided by their disk median brightness. A second channel removes limb darkening: the disk centre and radius are estimated from the image, the median brightness in 120 radial rings is interpolated to every pixel, and the image is divided by it (clipped to [0.4, 1.4]), so faint filaments near the limb get the contrast of disk-centre ones.
 
